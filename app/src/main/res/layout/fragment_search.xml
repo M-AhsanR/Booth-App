@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Fragments.SearchFragment">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="15dp">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:visibility="gone"
+            android:layout_height="match_parent"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/left_arrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search"
+            style="@style/HeadingsTextView"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/back"/>
+
+        <RelativeLayout
+            android:id="@+id/header_comment"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/header_cart"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/inbox_img"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_comment_icon_orange" />
+            <TextView
+                android:id="@+id/msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/badge_circle_background"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/header_cart"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_cart_icon"
+                android:backgroundTint="@color/orange"/>
+            <TextView
+                android:id="@+id/cart_count"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:paddingRight="3dp"
+                android:paddingLeft="3dp"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/badge_circle_background"
+                />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/header_more"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/more_icon"
+            android:visibility="gone"
+            android:tint="@color/orange" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/umbrella" />
+
+    <LinearLayout
+        android:id="@+id/search_field_selector"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/search_field_background"
+        android:orientation="horizontal"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="5dp"
+        android:layout_marginRight="20dp"
+        android:paddingBottom="5dp"
+        android:paddingRight="15dp"
+        android:paddingLeft="15dp"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:drawableRight="@drawable/search_miror"
+            android:gravity="center_vertical"
+            android:textColor="@color/font_color"
+            android:text="@string/search" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/search_field"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:visibility="gone"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4.4"
+            android:background="@drawable/search_field_background"
+            android:orientation="horizontal"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            android:weightSum="2">
+
+            <AutoCompleteTextView
+                android:id="@+id/searchAutoComplete"
+                style="@style/MiniTextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_weight=".7"
+                android:drawableLeft="@drawable/drop_down_orange"
+                android:focusableInTouchMode="false"
+                android:hint="@string/products"
+                android:paddingRight="10dp"
+                android:textColorHint="@color/font_color" />
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/lightgrey" />
+
+            <EditText
+                android:id="@+id/searchEdit"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1.3"
+                android:background="@android:color/transparent"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:hint="@string/search"
+                android:singleLine="true"
+                android:scrollHorizontally="true"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/searchBtn"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/search_miror" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".1" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:gravity="center">
+            <RelativeLayout
+                android:id="@+id/list"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:elevation="3dp"
+                android:background="@drawable/white_circle">
+                <ImageView
+                    android:id="@+id/iv_filters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_filter_icon"
+                    android:backgroundTint="@color/orange"
+                    android:layout_centerInParent="true"
+                    android:padding="5dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/grid_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/line_divider" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/grid_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/products_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/products_search_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+        <LinearLayout
+            android:id="@+id/products_separator"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/products_search_count"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/orange"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/noProductsText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/noItemsFound"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/products_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/products_separator"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/questions_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/questionsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+        <LinearLayout
+            android:id="@+id/Questios_separator"
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_below="@+id/questionsCount"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/orange"
+            android:orientation="horizontal" />
+
+        <TextView
+            android:id="@+id/noQuestionsText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/noQuestionsFound"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/questions_recycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/question_writing_layout"
+            android:layout_below="@+id/Questios_separator"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+
+        <LinearLayout
+            android:id="@+id/question_writing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/orange"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/ask_question"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/search_question_edit_background"
+                android:fontFamily="@font/robotomedium"
+                android:gravity="center"
+                android:paddingLeft="40dp"
+                android:paddingTop="10dp"
+                android:paddingRight="40dp"
+                android:paddingBottom="10dp"
+                android:text="@string/ask_a_question"
+                android:textColor="@color/orange"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/booths_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/booths_Count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/orange" />
+
+        <TextView
+            android:id="@+id/noBoothsText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/noBoothsFound"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/booths_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/people_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="20dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/peopleCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/orange" />
+
+        <TextView
+            android:id="@+id/noUsersText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_data_found"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/people_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

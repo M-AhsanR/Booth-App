@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ChatActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/chat_username"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            style="@style/HeadingsTextView"/>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_main_logo" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messages_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/post_message_layout"
+            app:stackFromEnd="true"
+            app:reverseLayout="true"
+            android:paddingBottom="10dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/post_message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/round_grey_border"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentBottom="true"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/post_attatchment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/attachment_icon"
+                android:paddingLeft="15dp"
+                android:paddingRight="5dp"/>
+
+            <EditText
+                android:id="@+id/postMessageText"
+                style="@style/TextView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:inputType="textVisiblePassword"
+                android:singleLine="true"
+                android:paddingRight="5dp"
+                android:paddingLeft="5dp"
+                android:maxLines="1"
+                android:scrollHorizontally="true"
+                android:hint="@string/type_a_message"
+                android:textColorHint="@color/font_color" />
+
+            <ImageView
+                android:id="@+id/postMessagebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingRight="15dp"
+                android:paddingLeft="5dp"
+                android:src="@android:drawable/ic_menu_send" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProductComments">
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/HeadingsTextView"
+            android:text="@string/product_comments"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_main_logo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:background="@color/orange"/>
+    <RelativeLayout
+        android:id="@+id/commentsLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/commentsbackground"
+        android:orientation="vertical"
+        android:paddingTop="5dp"
+        android:layout_below="@+id/separator"
+        android:paddingBottom="5dp"
+        android:layout_marginBottom="50dp"
+        android:visibility="visible"
+        >
+
+        <LinearLayout
+            android:id="@+id/commenttextLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp">
+
+            <TextView
+                style="@style/HeadingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/comments"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/showing_commentscunt"
+                style="@style/HeadingsTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dp"
+                android:textColor="@color/orange"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/commentsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_above="@+id/previousComentsLayout"
+            android:layout_below="@+id/commenttextLayout"
+            android:layout_marginTop="15dp"/>
+        <LinearLayout
+            android:id="@+id/previousComentsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:visibility="visible"
+            android:paddingBottom="10dp"
+            android:background="@color/white"
+            android:layout_marginTop="5dp">
+            <TextView
+                style="@style/HeadingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/viewpreviouscomments"
+                />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/commentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/round_grey_border"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:weightSum="1">
+
+        <com.hendraanggrian.appcompat.widget.SocialAutoCompleteTextView
+            android:id="@+id/postCommentText"
+            style="@style/TextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical"
+            android:background="@null"
+            android:completionThreshold="0"
+            android:hint="@string/writeYourComment"
+            android:textColorHint="@color/font_color"
+            app:mentionColor="@color/orange"
+            />
+
+        <ImageView
+            android:id="@+id/postCommentbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="15dp"
+            android:paddingLeft="5dp"
+            android:visibility="visible"
+            android:src="@android:drawable/ic_menu_send" />
+        <ProgressBar
+            android:id="@+id/post_msg_loader"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateTint="@color/orange"
+            android:visibility="gone"
+            android:layout_marginRight="15dp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

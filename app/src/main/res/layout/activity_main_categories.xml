@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".Activities.MainCategoriesActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/lightblack"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeadingsTextView"
+            android:text="@string/selectCategories" />
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@color/orange" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/rv_catlist_cla"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <Button
+                    android:id="@+id/confirmBtn"
+                    style="@style/OrangeBtn"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="75dp"
+                    android:text="@string/Confirm" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/umbrella" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

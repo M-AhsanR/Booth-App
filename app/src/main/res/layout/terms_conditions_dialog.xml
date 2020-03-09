@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
+    android:background="@drawable/custom_dialog_background">
+
+    <TextView
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/termsConditions"
+        android:textColor="@color/orange"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        style="@style/HeadingsTextView"/>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus fermentum nibh eget pulvinar. Nunc pulvinar molestie velit at blandit. Nulla at rhoncus massa, quis venenatis enim. Nulla facilisi. Suspendisse quis justo id odio iaculis porta nec et sem. Suspendisse dictum ultricies purus, sit amet porta elit venenatis vitae. Mauris varius consectetur dui, ut fringilla massa lobortis eget. Donec a euismod orci. Nullam pretium neque ut vestibulum elementum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus viverra mauris vitae venenatis tincidunt. In scelerisque tellus finibus vulputate gravida. Ut ac nisl quis lectus ultricies iaculis ut eu ex. Duis ac ultrices massa.
+
+Suspendisse ac venenatis magna. Cras at volutpat arcu. Morbi maximus eu justo nec feugiat. Nulla facilisi. Sed mattis nibh fermentum venenatis consectetur. Curabitur sagittis mauris enim, rhoncus pellentesque mauris dictum eu. Vivamus facilisis mollis orci eget dictum. Curabitur eu ipsum interdum magna tempus vulputate vel vel ipsum. Aliquam et arcu velit. Fusce bibendum bibendum varius. Aliquam tellus ex, convallis et metus quis, semper interdum dui. Aliquam eget imperdiet dui. Cras sit amet vulputate lorem, rhoncus ornare tellus. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+
+Nullam vulputate egestas enim. Nulla varius, massa sit amet cursus dapibus, mauris lorem elementum nisl, sed ultricies dui velit non risus. Ut et placerat mauris. Nunc efficitur vitae felis sed pulvinar. Mauris ultricies magna quis leo lacinia, ac finibus turpis accumsan. In luctus sed nibh sit amet pulvinar. Nullam nec iaculis nisl. Proin in congue nunc, quis lobortis nisi. In imperdiet eget nisi ut sollicitudin. Ut ipsum mauris, imperdiet id sapien non, finibus vehicula eros. Nam eleifend luctus arcu in vehicula. Nullam lectus nisl, pharetra et venenatis vel, interdum placerat mi. Proin egestas sed dolor sit amet lacinia. Etiam rutrum est velit, quis congue felis dapibus ac. Phasellus ultricies nulla ut leo lacinia porttitor."
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                style="@style/TextView"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginLeft="10dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/productImg"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        app:riv_corner_radius="10dp"
+        android:src="@color/yellow"/>
+
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_marginTop="2dp"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/productTitle"
+        style="@style/MiniTextView"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textColor="@color/orange"/>
+
+    <TextView
+        android:id="@+id/boothTitle"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="@string/booth_name"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        style="@style/MiniTextView"
+        android:textSize="10dp"
+        android:textColor="@color/font_color"/>
+
+</LinearLayout>

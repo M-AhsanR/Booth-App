@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/viewdetail"
+        android:title="@string/viewdetail" />
+    <item android:id="@+id/viewProfile"
+        android:title="@string/viewprofile" />
+    <item android:id="@+id/complainOrder"
+        android:title="@string/complain_order"
+        android:visible="false"/>
+    <item android:id="@+id/viewAddress"
+        android:title="@string/viewaddress"
+        android:visible="false"/>
+
+</menu>

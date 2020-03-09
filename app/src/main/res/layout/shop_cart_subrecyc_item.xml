@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:weightSum="1">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/productImg"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:riv_corner_radius="10dp"
+        android:src="@color/yellow"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/productTitle"
+            android:layout_weight=".9"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="@string/productTitle"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            style="@style/HeadingsTextView"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".6"
+            android:text="@string/quantity"
+            style="@style/MiniTextView"
+            android:textColor="@color/font_color"
+            android:fontFamily="@font/robotomedium"
+            />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight=".5">
+        <TextView
+            android:gravity="center"
+            android:id="@+id/productQuantity"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:paddingLeft="5dp"
+            style="@style/OrangeBtn"
+            android:drawableRight="@drawable/ccp_down_arrow"
+            android:drawableTint="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:weightSum="1"
+        android:gravity="end">
+
+        <ImageView
+            android:id="@+id/more"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_icon"/>
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22.50 SAR"
+            android:textStyle="bold"
+            style="@style/MiniTextView"/>
+    </LinearLayout>
+
+</LinearLayout>

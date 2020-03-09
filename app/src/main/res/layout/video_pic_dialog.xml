@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="45dp"
+    android:layout_marginRight="45dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/custom_dialog_background">
+
+    <TextView
+        style="@style/HeadingsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/choose" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose_images_videos"
+        android:layout_gravity="center"
+        android:textStyle="normal"
+        android:layout_marginTop="5dp"
+        style="@style/TextView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_divider"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/choose_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/image"
+            style="@style/TextView"
+            android:textColor="@color/circle_completed_green_color"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_divider"
+        />
+
+    <LinearLayout
+        android:id="@+id/choose_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/video"
+            style="@style/TextView"
+            android:textColor="@color/orange"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

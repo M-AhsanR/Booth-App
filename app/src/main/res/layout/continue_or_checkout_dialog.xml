@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="45dp"
+    android:layout_marginRight="45dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/custom_dialog_background">
+
+    <TextView
+        style="@style/HeadingsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Success"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Product added to cart"
+        android:layout_gravity="center"
+        android:textStyle="normal"
+        android:layout_marginTop="5dp"
+        style="@style/HeadingsTextView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey5"
+        android:layout_marginTop="20dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/continue_shop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Continue Shopping"
+            android:fontFamily="@font/robotomedium"
+            android:textColor="@color/circle_completed_green_color"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey5"
+        />
+
+    <LinearLayout
+        android:id="@+id/proceed_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to Cart"
+            android:textColor="@color/orange"
+            android:fontFamily="@font/robotomedium"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

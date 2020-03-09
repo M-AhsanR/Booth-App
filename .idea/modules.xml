@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="booth app/app" />
+      <module fileurl="file://$PROJECT_DIR$/booth app.iml" filepath="$PROJECT_DIR$/booth app.iml" group="booth app" />
+      <module fileurl="file://$PROJECT_DIR$/pix/pix.iml" filepath="$PROJECT_DIR$/pix/pix.iml" group="booth app/pix" />
+      <module fileurl="file://$PROJECT_DIR$/spyglass/spyglass.iml" filepath="$PROJECT_DIR$/spyglass/spyglass.iml" group="booth app/spyglass" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/progressbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/categories_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_corners_lightblack_btn"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="5dp"
+                android:layout_marginLeft="20dp"
+                android:paddingBottom="5dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:layout_alignParentLeft="true"
+                style="@style/MiniTextView"/>
+
+            <RelativeLayout
+                android:id="@+id/list"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:elevation="3dp"
+                android:background="@drawable/white_circle">
+
+                <ImageView
+                    android:tint="@color/orange"
+                    android:id="@+id/image"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/grid_icon"
+                    android:backgroundTint="@color/orange" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/home_home_swipe">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layoutAnimation="@anim/layout_animation_fall_down"
+                    android:visibility="visible"
+                    android:id="@+id/rv_categories_hcf"
+                    android:descendantFocusability="blocksDescendants"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:background="@color/white"
+                    android:visibility="gone"
+                    android:id="@+id/gv_categories_hcf"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/no_data_found"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+        <TextView
+            style="@style/HeadingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/empty_home_screen" />
+        </RelativeLayout>
+
+</LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/orange"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

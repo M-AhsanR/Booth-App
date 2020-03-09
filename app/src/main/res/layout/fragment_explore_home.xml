@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <LinearLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/progressbar">
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Booth"
+                style="@style/HeadingsTextView"/>
+
+            <RelativeLayout
+                android:id="@+id/header_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_centerInParent="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_comment_icon"
+                    android:backgroundTint="@color/orange"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/header_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/ic_cart_icon"
+                    android:backgroundTint="@color/orange"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/settings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/more_icon"
+                    android:tint="@color/orange"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/orange"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/umbrella" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:fillViewport="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="5dp"
+                    android:weightSum="1"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/categories_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_corners_lightblack_btn"
+                        android:paddingLeft="15dp"
+                        android:paddingRight="15dp"
+                        android:text="Log in"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:textColor="@color/white"
+                        style="@style/MiniTextView"/>
+
+                    <View
+                        android:layout_weight="1.1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></View>
+
+                    <RelativeLayout
+                        android:id="@+id/list"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:elevation="3dp"
+                        android:background="@drawable/white_circle">
+
+                        <ImageView
+                            android:tint="@color/orange"
+                            android:id="@+id/image"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/grid_icon"
+                            android:backgroundTint="@color/orange" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/orange"/>
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/home_home_swipe">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:layoutAnimation="@anim/layout_animation_fall_down"
+                            android:visibility="visible"
+                            android:id="@+id/rv_categories_hcf"
+                            android:descendantFocusability="blocksDescendants"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:background="@color/white"
+                            android:visibility="gone"
+                            android:id="@+id/gv_categories_hcf"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                        </androidx.recyclerview.widget.RecyclerView>
+                    </LinearLayout>
+
+                </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminateTint="@color/orange"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

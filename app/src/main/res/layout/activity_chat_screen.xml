@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ChatScreenActivity"
+    android:background="@color/blue"
+    android:padding="15dp"
+    android:layoutDirection="ltr">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:weightSum="2">
+
+    <EditText
+        android:layout_weight="2"
+        android:id="@+id/messageEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:hint="saySomething"
+        android:textSize="14sp"
+        android:background="@drawable/white_search_box"
+        android:textColor="@color/blue"
+        android:textColorHint="@color/blue"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/sndMsgBtn">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@color/drawerColor"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:backgroundTint="@color/white"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="60dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_gravity="end">
+
+        <TextView
+            android:id="@+id/recieverName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/reciverImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="name"
+            android:src="@color/yellow"
+            android:layout_marginLeft="5dp"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginBottom="5dp"
+        android:id="@+id/chatRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+
+</RelativeLayout>

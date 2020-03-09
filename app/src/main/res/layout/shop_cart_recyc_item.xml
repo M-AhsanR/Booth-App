@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/boothName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/booth_name"
+            android:textStyle="bold"
+            style="@style/HeadingsTextView"/>
+        <TextView
+            android:gravity="center_vertical"
+            android:id="@+id/itemsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(items)"
+            android:textColor="@color/orange"
+            android:textStyle="bold"
+            android:layout_marginLeft="5dp"
+            style="@style/MiniTextView"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/shop_cart_subRcyc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/total_price"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/orange"
+        android:text="Total SAR 120.00"
+        android:textColor="@color/white"
+        android:gravity="center"
+        style="@style/TextView"
+        android:visibility="gone"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:weightSum="3"
+    android:layout_marginBottom="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/memeberImg"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:src="@color/yellow"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_weight="3">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id="@+id/memberName"
+            android:textStyle="bold"
+            style="@style/TextView"/>
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/adminTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/drawerColor"
+                android:text="(admin)"
+                style="@style/TextView"/>
+        </LinearLayout>
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/lastMsgTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Message"
+            style="@style/TextView"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/membersMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#555555"/>
+
+</LinearLayout>

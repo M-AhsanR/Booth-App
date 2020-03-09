@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/white"
+    android:weightSum="1"
+    android:layout_marginTop="2dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@color/orange"/>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/HeadingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/username"
+            android:textColor="@color/orange"/>
+
+        <RatingBar
+            android:progressTint="@color/orange"
+            android:id="@+id/ratings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="0.1"
+            android:isIndicator="true"
+            android:numStars="5"
+            style="?android:attr/ratingBarStyleSmall"
+            android:rating="0"/>
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_marginTop="5dp"
+            style="@style/TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:textColor="@color/time_color"
+        style="@style/TextView"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 mins ago" />
+
+
+</LinearLayout>

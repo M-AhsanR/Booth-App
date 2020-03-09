@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.MyOrdersActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:background="@color/lightblack"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            style="@style/HeadingsTextView"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/Registeration"/>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@color/orange"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_orders"
+        style="@style/Hyperlink"
+        android:padding="4dp"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"/>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rl_myorder_moa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

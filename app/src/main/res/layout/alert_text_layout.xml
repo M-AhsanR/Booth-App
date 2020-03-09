@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/custom_dialog_background">
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alert"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        style="@style/HeadingsTextView"/>
+
+
+    <TextView
+        android:id="@+id/address_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:gravity="center"
+        android:layout_gravity="center"
+        style="@style/TextView"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="30dp">
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_corners_orange_btn"
+            android:text="@string/ok"
+            android:textAllCaps="false"
+            style="@style/HeadingsTextView"/>
+    </LinearLayout>
+
+</LinearLayout>

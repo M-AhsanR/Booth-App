@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+
+    <ImageView
+        android:id="@+id/iv_parentimage_cla"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:paddingLeft="?android:attr/expandableListPreferredItemPaddingLeft"
+        android:background="@drawable/dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/tv_parenttext_cla"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:layout_marginLeft="8dp"
+        android:text="My Name is Umair"
+        android:textColor="#000000"
+        android:layout_gravity="center"
+        android:drawableEnd="@drawable/drop_down_black"
+        style="@style/TextView"/>
+
+
+</LinearLayout>

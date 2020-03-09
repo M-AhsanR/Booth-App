@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_main_logo"/>
+
+        <RelativeLayout
+            android:id="@+id/header_comment"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/header_cart">
+        <ImageView
+            android:id="@+id/inbox_img"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_comment_icon_orange" />
+            <TextView
+                android:id="@+id/msg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/badge_circle_background"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/header_cart"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_cart_icon"
+            android:backgroundTint="@color/orange"/>
+            <TextView
+                android:id="@+id/cart_count"
+                android:layout_width="wrap_content"
+                android:layout_height="15dp"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/badge_circle_background"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/settings"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+        <ImageView
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/more_icon"
+            android:tint="@color/orange"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                style="@style/AppTabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:background="@drawable/lightblack_underline_style"
+                app:tabGravity="fill"
+                app:tabMaxWidth="0dp"
+                app:tabMode="fixed"
+                app:tabTextAppearance="@style/AppTabTextAppearance">
+            </com.google.android.material.tabs.TabLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/contain"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </androidx.viewpager.widget.ViewPager>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/umbrella" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

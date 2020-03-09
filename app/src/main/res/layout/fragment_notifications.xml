@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activities.RegisterBayerActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="15dp">
+
+        <TextView
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            style="@style/HeadingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Notifications" />
+
+        <LinearLayout
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/notifi_header_comment"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp">
+
+                <ImageView
+                    android:id="@+id/inbox_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_comment_icon_orange" />
+
+                <TextView
+                    android:id="@+id/msg_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/badge_circle_background"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/notifi_header_cart"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_cart_icon"
+                    android:backgroundTint="@color/orange" />
+
+                <TextView
+                    android:id="@+id/cart_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="15dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/badge_circle_background"
+                    android:gravity="center"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="10dp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/notifi_header_more"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/more_icon"
+                    android:tint="@color/orange" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/header"
+        android:background="@color/orange"
+        android:orientation="vertical" />
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_notification"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/progressbar"
+        android:layout_below="@+id/separator">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/NotificationRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/noNotificationMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/separator"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/HeadingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_notification" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/separator">
+
+        <ProgressBar
+            android:id="@+id/notificationProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/orange" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminateTint="@color/orange"
+        android:visibility="gone" />
+</RelativeLayout>

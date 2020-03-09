@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.asksira.android:dropdownview:1.0.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ddd466b53d0756444b909e36082f42a0/jetified-dropdownview-1.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/ddd466b53d0756444b909e36082f42a0/jetified-dropdownview-1.0.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.asksira.android/dropdownview/1.0.3/54174c67db9209ee2f7c29dd91b339b1f0bdf8f9/dropdownview-1.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.asksira.android/dropdownview/1.0.3/8219d4ee8788c2e31f90ec3c7279bec190fecf09/dropdownview-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

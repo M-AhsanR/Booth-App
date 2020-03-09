@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "263845323675",
+    "firebase_url": "https://booth-dd974.firebaseio.com",
+    "project_id": "booth-dd974",
+    "storage_bucket": "booth-dd974.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:263845323675:android:a84757172350f67e",
+        "android_client_info": {
+          "package_name": "com.schopfen.Booth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "263845323675-gvvreb2qic0i2q12sgv0euk2aif2omk5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYt5EOH-LC94RQUcPj-wsY5sn_OUdfLNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "263845323675-gvvreb2qic0i2q12sgv0euk2aif2omk5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "263845323675-sfo5h0oalhom3kpsdc18notumn26nt7b.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.schopfen.booth"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

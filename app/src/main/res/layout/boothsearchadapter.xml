@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profilePic"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@color/orange"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_boothname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Booth Name"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                style="@style/HeadingsTextView" />
+
+            <TextView
+                android:id="@+id/tv_boothusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="boothusername"
+                android:textColor="@color/black"
+                style="@style/TextView" />
+
+            <TextView
+                android:id="@+id/tv_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="Fashion, Health Care, Supports"
+                android:textColor="@color/black"
+                style="@style/TextView" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Jeddah"
+                android:textColor="@color/black"
+                style="@style/TextView" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/more_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/more_icon"
+            android:backgroundTint="@color/orange"
+            android:visibility="gone"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/darkgray"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegisterBayerActivity"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textColor="@color/font_color"
+            style="@style/HeadingsTextView"
+            android:text="@string/contactBooth"/>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_main_logo"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:textColor="@color/orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contactHours"
+                    style="@style/HeadingsTextView"/>
+
+                <TextView
+                    android:id="@+id/contactTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView"/>
+
+                <TextView
+                    android:id="@+id/contactDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView"/>
+
+
+                <LinearLayout
+                    android:id="@+id/call"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_call"/>
+
+                    <TextView
+                        android:paddingLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:id="@+id/phoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true"
+                        style="@style/TextView"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_email"/>
+
+                    <TextView
+                        android:id="@+id/email"
+                        style="@style/TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textIsSelectable="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="5dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/message_call_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginTop="20dp">
+                <Button
+                    android:id="@+id/contact_booth_msg"
+                    android:layout_weight="0.6"
+                    android:layout_width="0dp"
+                    style="@style/OrangeBtn"
+                    android:text="@string/messageBooth"
+                    android:layout_marginBottom="10dp"/>
+                    <Button
+                        android:id="@+id/btn_call"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="0.4"
+                        android:layout_width="0dp"
+                        style="@style/OrangeBtn"
+                        android:text="@string/Call"
+                        android:layout_marginBottom="10dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

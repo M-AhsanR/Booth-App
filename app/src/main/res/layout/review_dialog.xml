@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:background="@drawable/custom_dialog_background"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingTop="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp">
+
+    <LinearLayout
+        android:id="@+id/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_heading"
+            style="@style/HeadingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/dialog_text"
+            style="@style/HeadingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp" />
+
+        <RatingBar
+            android:id="@+id/dialog_ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:backgroundTint="@color/time_color"
+            android:progressTint="@color/orange"
+            android:rating="5" />
+
+        <EditText
+            android:id="@+id/dialog_review_text"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/layoutstyle_edittext"
+            android:fontFamily="@font/robotomedium"
+            android:gravity="start"
+            android:hint="@string/review"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:textColor="@color/font_color"
+            android:textColorHint="@color/font_color"
+            android:textSize="14dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/dialog_submit_btn"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners_orange_btn"
+                android:fontFamily="@font/robotomedium"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="@string/Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/dialog_progressBar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:indeterminateTint="@color/orange"
+                android:visibility="gone" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/progressbarRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:indeterminateTint="@color/orange" />
+    </LinearLayout>
+
+</RelativeLayout>

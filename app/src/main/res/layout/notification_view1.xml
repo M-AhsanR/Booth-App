@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/view1Linear"
+    android:background="@color/white"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/userImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@color/yellow"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1.5">
+            <TextView
+                android:id="@+id/notificationText"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/TextView"/>
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_weight=".5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:gravity="right"
+                android:textColor="@color/time_color"
+                style="@style/MiniTextView"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="right">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/detailImage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:riv_corner_radius="5dp"
+                android:scaleType="fitXY"
+                android:src="@color/yellow"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/line_divider"/>
+</LinearLayout>

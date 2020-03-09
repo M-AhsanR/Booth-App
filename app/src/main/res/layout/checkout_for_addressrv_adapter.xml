@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <LinearLayout
+        android:id="@+id/ll_click_cofara"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:background="@drawable/custom_dialog_background"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/addressTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/address"
+                android:textStyle="bold"
+                style="@style/TextView"/>
+
+            <ImageView
+                android:id="@+id/delete_more"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/more_icon"/>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="80dp"
+            android:layout_height="100dp"
+            android:text=""
+            android:maxLines="5"
+            android:ellipsize="end"
+            android:textColor="@color/darkgray"
+            android:textSize="14dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_address"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:orientation="vertical"
+        android:background="@drawable/add_address_background"
+        android:gravity="center"
+        android:visibility="visible"
+        android:padding="10dp">
+        <ImageView
+            android:tint="@color/white"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/add_icon"/>
+    </LinearLayout>
+
+</LinearLayout>

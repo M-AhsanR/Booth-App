@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginBottom="5dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/payment_linear"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="fill"
+        android:background="@drawable/custom_dialog_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/cardimage"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/visa_card_sample" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/add_paymentmethod"
+        android:layout_width="@dimen/_82sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_gravity="fill"
+        android:background="@drawable/add_address_background"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/add_icon" />
+    </LinearLayout>
+
+</LinearLayout>

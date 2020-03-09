@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkwhite"
+    android:orientation="vertical"
+    tools:context=".Activities.ApproveOrderActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_color"
+            android:text="@string/approve_order_title"
+            style="@style/HeadingsTextView"/>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_main_logo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/HeadingsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/delivery_address"
+                    android:fontFamily="@font/robotomedium" />
+
+                <TextView
+                    android:id="@+id/approve_booth_name"
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/approve_red"
+                    android:fontFamily="@font/robotomedium"
+                    />
+
+                <TextView
+                    android:id="@+id/approve_address_line"
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomedium" />
+
+                <TextView
+                    android:id="@+id/approve_number"
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomedium"
+                    />
+
+                <TextView
+                    android:id="@+id/approve_email"
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotomedium" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:visibility="visible">
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    style="@style/HeadingsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/summary" />
+
+                <TextView
+                    android:id="@+id/approve_order_name"
+                    style="@style/HeadingsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/robotomedium"
+                    android:text="Booth A"
+                    android:textColor="@color/orange" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/quantum_grey" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/approve_product_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/total"
+                             />
+
+                        <TextView
+                            android:id="@+id/approve_totalItemsCount"
+                            style="@style/TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/robotomedium"
+                            android:text="(0 Items)"
+                            />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/approve_totalPrice"
+                        style="@style/TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/robotomedium"
+                        android:gravity="right"
+                        android:text="00.00 SAR"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vat"
+                            android:fontFamily="@font/robotomedium"
+                            />
+
+                        <TextView
+                            android:id="@+id/approve_vatPercentage"
+                            style="@style/TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:text="(0 %)"
+                            android:fontFamily="@font/robotomedium"
+                          />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/approve_vatPrice"
+                        style="@style/TextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:text="00.00 SAR"
+                        android:fontFamily="@font/robotomedium"
+                         />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/line_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        style="@style/HeadingsTextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery_charges"
+                        android:fontFamily="@font/robotomedium"
+                        android:textStyle="normal" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_drop_shadow">
+
+                        <EditText
+                            android:id="@+id/approve_delivery_charges"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextView"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@color/invisible"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/robotomedium"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        style="@style/HeadingsTextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/items_discount"
+                        android:fontFamily="@font/robotomedium"
+                        android:textStyle="normal" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_drop_shadow">
+                        <EditText
+                            android:id="@+id/approve_discount"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextView"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:inputType="numberDecimal"
+                            android:background="@color/invisible"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/robotomedium"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        style="@style/HeadingsTextView"
+                        android:layout_width="0dp"
+                        android:layout_weight="1.5"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery_days"
+                        android:fontFamily="@font/robotomedium"
+                        android:textStyle="normal" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="40dp"
+                        android:background="@drawable/rounded_drop_shadow">
+                        <EditText
+                            android:id="@+id/delivery_days"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            style="@style/TextView"
+                            android:singleLine="true"
+                            android:maxLines="1"
+                            android:inputType="number"
+                            android:background="@color/invisible"
+                            android:gravity="center_vertical"
+                            android:fontFamily="@font/robotomedium"
+                            android:paddingRight="20dp"
+                            android:paddingLeft="20dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/quantum_grey"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/grandTotal"
+                        android:textColor="@color/orange"
+                        android:textStyle="normal"
+                        android:fontFamily="@font/robotomedium"
+                        style="@style/HeadingsTextView"/>
+                    <TextView
+                        android:id="@+id/approve_grand_total"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="00.00 SAR"
+                        android:fontFamily="@font/robotomedium"
+                        style="@style/TextView"
+                        android:gravity="right"
+                        android:textColor="@color/orange"
+                        android:textStyle="normal" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btns_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/reject_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="@string/reject"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center"
+                        android:fontFamily="@font/robotomedium"
+                        android:background="@drawable/rounded_corners_red_btn"
+                        android:drawableTint="@color/approve_red"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/approve_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:text="@string/approve"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/robotomedium"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/rounded_corners_orange_btn"
+                        android:drawableTint="@color/approve_red"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

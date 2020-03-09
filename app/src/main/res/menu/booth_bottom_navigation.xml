@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/home"
+        android:title=""
+        android:icon="@drawable/ic_tab_home" />
+    <item android:id="@+id/orders"
+        android:title=""
+        android:icon="@drawable/ic_tab_orders" />
+    <item android:id="@+id/addProduct"
+        android:title=""
+        android:icon="@drawable/add_icon" />
+   <item android:id="@+id/notifications"
+        android:title=""
+        android:icon="@drawable/ic_tab_notifications" />
+    <item android:id="@+id/myAccount"
+        android:title=""
+        android:icon="@drawable/ic_tab_profile" />
+</menu>

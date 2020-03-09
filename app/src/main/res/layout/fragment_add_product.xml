@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Activities.CategoriesListActivity">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <TextView
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/HeadingsTextView"
+            android:text="@string/addAProduct" />
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_main_logo" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedsv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="40dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HeadingsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="@string/productPicture" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/images_list"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp"/>
+
+                        <RelativeLayout
+                            android:id="@+id/seventh_layout"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/seventh_image"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_centerVertical="true"
+                                android:src="@color/orange"
+                                app:riv_corner_radius="10dp" />
+
+                            <ImageView
+                                android:id="@+id/add_image_camera"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:tint="@color/white"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/camera_icon"
+                                android:visibility="visible" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/HeadingsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/productVideo" />
+
+                    <RelativeLayout
+                        android:id="@+id/video_layout"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp">
+
+                        <com.makeramen.roundedimageview.RoundedImageView
+                            android:id="@+id/video"
+                            android:layout_width="50dp"
+                            android:scaleType="centerCrop"
+                            android:layout_height="50dp"
+                            android:src="@color/orange"
+                            app:riv_corner_radius="10dp" />
+
+                        <ImageView
+                            android:id="@+id/add_video_camera"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:tint="@color/white"
+                            android:layout_centerInParent="true"
+                            android:src="@android:drawable/presence_video_away"
+                            android:visibility="visible" />
+                        <ImageView
+                            android:id="@+id/delete_video"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_cross" />
+                    </RelativeLayout>
+
+                    <EditText
+                        android:id="@+id/productTitle"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:singleLine="true"
+                        android:hint="@string/productTitle"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/mainCategory"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:drawableRight="@drawable/drop_down_black"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/category" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/subCategory"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:drawableRight="@drawable/drop_down_black"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/subCategory" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/subSubCategory"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:drawableRight="@drawable/drop_down_black"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/subSubCategory" />
+
+                    <EditText
+                        android:id="@+id/productPrice"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/price"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/layoutstyle_edittext"
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp">
+
+                        <TextView
+                            style="TextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/availability" />
+
+                        <Switch
+                            android:id="@+id/availabilitySwitch"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:thumbTint="@color/orange"
+                            android:layout_marginLeft="20dp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/HeadingsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:textColor="@color/orange" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/line_divider"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/brandName"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/brandName"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:maxLines="1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/itemCondition"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:drawableRight="@drawable/drop_down_black"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/itemCondition" />
+
+                    <EditText
+                        android:id="@+id/productDetail"
+                        android:layout_height="150dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/layoutstyle_edittext"
+                        android:gravity="start"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:textSize="14dp"
+                        android:elevation="2dp"
+                        android:maxLength="150"
+                        android:textColorHint="@color/font_color"
+                        android:ellipsize="end"
+                        android:hint="@string/details"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="10dp" />
+                    <EditText
+                        android:id="@+id/returnPolicyEditText"
+                        android:layout_height="150dp"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/layoutstyle_edittext"
+                        android:gravity="start"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:textSize="14dp"
+                        android:elevation="2dp"
+                        android:maxLength="150"
+                        android:textColorHint="@color/font_color"
+                        android:ellipsize="end"
+                        android:hint="@string/return_policy"
+                        android:imeOptions="actionDone"
+                        android:paddingTop="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/HeadingsTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery"
+                        android:textColor="@color/orange" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:background="@color/line_divider"></LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/deliveryCost"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/deliveryCost"
+                        android:imeOptions="actionDone"
+                        android:singleLine="true"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1" />
+
+                    <AutoCompleteTextView
+                        android:id="@+id/estimatedDeliveryTime"
+                        style="@style/EditText"
+                        android:layout_marginTop="20dp"
+                        android:drawableRight="@drawable/drop_down_black"
+                        android:focusableInTouchMode="false"
+                        android:hint="@string/estimatedDeliveryTime" />
+                </LinearLayout>
+
+
+                <Button
+                    android:id="@+id/confirmBtn"
+                    style="@style/OrangeBtn"
+                    android:layout_marginLeft="75dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="75dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="@string/Confirm" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/umbrella" />
+
+    </RelativeLayout>
+</LinearLayout>

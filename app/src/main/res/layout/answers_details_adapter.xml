@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/image_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ProgressBar
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/orange" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/comenterImg"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:transitionName="profile" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center_vertical"
+                android:layout_toRightOf="@+id/image_layout"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/comenterName"
+                    style="@style/HeadingsTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/commentcity"
+                    style="@style/MiniTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/font_color" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true">
+                <TextView
+                    android:id="@+id/commentTime"
+                    style="@style/MiniTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:textColor="@color/time_color" />
+
+                    <ImageView
+                        android:id="@+id/comment_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/more_icon"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <com.tylersuehr.socialtextview.SocialTextView
+            android:id="@+id/commentText"
+            style="@style/TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:linkModes="mention"
+            android:layout_marginRight="10dp"
+            app:mentionColor="@color/orange" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:layout_marginRight="10dp"/>
+
+</LinearLayout>

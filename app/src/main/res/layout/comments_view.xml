@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:elevation="2dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="3">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/comenterImg"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@color/yellow"/>
+
+        <LinearLayout
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="3"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/comenterName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textStyle="bold"
+                style="@style/TextView"/>
+            <TextView
+                android:id="@+id/commentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="14dp"
+                android:textColor="@color/time_color"
+                style="@style/TextView"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/commentMore"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:backgroundTint="#222222"
+            style="@style/TextView"/>
+    </LinearLayout>
+
+
+    <com.tylersuehr.socialtextview.SocialTextView
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        android:id="@+id/commentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextView"
+        app:linkModes="mention"
+        app:mentionColor="@color/drawerColor" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/commentImg"
+            android:layout_marginTop="5dp"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
+            android:visibility="gone"
+            android:src="@color/yellow"/>
+    </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mine"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:weightSum="3">
+            <ImageView
+                android:id="@+id/commentMoremine"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:backgroundTint="#555555"/>
+
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_marginLeft="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="3"
+                android:layout_marginRight="5dp"
+                android:gravity="right">
+
+                <TextView
+                    android:id="@+id/comenterNamemine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textStyle="bold"
+                    style="@style/TextView"/>
+                <TextView
+                    android:id="@+id/commentTimemine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time"
+                    android:textSize="14dp"
+                    android:textColor="@color/time_color"
+                    style="@style/TextView"/>
+            </LinearLayout>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:visibility="gone"
+                android:id="@+id/comenterImgmine"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:src="@color/yellow"/>
+
+        </LinearLayout>
+
+
+        <com.tylersuehr.socialtextview.SocialTextView
+            android:id="@+id/commentTextmine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextView"
+            app:linkModes="mention"
+            android:gravity="right"
+            app:mentionColor="@color/drawerColor" />
+
+        <!--<com.tylersuehr.socialtextview.SocialTextView-->
+        <!--android:id="@+id/commentText"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Comment hoga yahan par"-->
+        <!--android:visibility="gone"-->
+        <!--android:textColor="#222222"-->
+        <!--android:layout_marginLeft="50dp"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="right"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:scaleType="centerCrop"
+                android:id="@+id/commentImgmine"
+                android:layout_marginTop="5dp"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:visibility="gone"
+                android:src="@color/yellow"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

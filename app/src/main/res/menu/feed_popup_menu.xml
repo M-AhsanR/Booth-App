@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/viewDetails"
+        android:title="ViewDetails" />
+    <item android:id="@+id/reportGroup"
+        android:title="ReportGroup" />
+    <item android:id="@+id/invitePeople"
+        android:title="InvitePeople" />
+    <item android:id="@+id/createEvent"
+        android:title="CreateEvent" />
+    <item android:id="@+id/deleteGroup"
+        android:title="DeleteGroup" />
+
+
+</menu>

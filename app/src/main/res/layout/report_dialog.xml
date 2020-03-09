@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/custom_dialog_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reason"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        style="@style/HeadingsTextView"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0sp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corners_orange_btn"
+            android:text="Spam"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="false"
+            style="@style/TextView"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0sp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_corners_orange_btn"
+            android:text="Inappropriate"
+            android:textAllCaps="false"
+            style="@style/TextView"/>
+    </LinearLayout>
+</LinearLayout>

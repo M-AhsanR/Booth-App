@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal"
+    android:id="@+id/main_layout">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/product_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/camera_image" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/product_title"
+            style="@style/HeadingsTextView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:text="@string/productTitle"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/product_brand_name"
+            style="@style/TextView"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:text="Brand Name" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22.50"
+                android:textColor="@color/orange"
+                style="@style/MiniTextView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" SAR"
+                android:textColor="@color/font_color"
+                style="@style/MiniTextView" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <com.like.LikeButton
+            android:id="@+id/wishListBtn"
+            android:layout_width="32dp"
+            android:layout_height="24dp"
+            app:anim_scale_factor="2"
+            app:circle_end_color="@color/yellow"
+            app:circle_start_color="@color/yellow"
+            app:dots_primary_color="@color/yellow"
+            app:dots_secondary_color="@color/orange"
+            app:icon_size="24dp"
+            app:icon_type="heart"
+            app:is_enabled="true"
+            app:like_drawable="@drawable/add_to_wishlist_svg_selected"
+            app:unlike_drawable="@drawable/add_to_wishlist_svg" />
+
+        <ImageView
+            android:id="@+id/add_to_cart"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/addtocart_icon" />
+    </LinearLayout>
+
+
+</LinearLayout>

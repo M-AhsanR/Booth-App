@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".Activities.RegisterBoothActivity">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/header"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/boothLogo"
+                            app:civ_border_width="1dp"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:src="@color/lightblack"
+                            android:layout_centerInParent="true"/>
+
+                        <TextView
+                            android:id="@+id/logoBtn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:text="@string/logo"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="2"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/boothRadio"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:text="Indivisual"
+                            android:background="@drawable/rounded_corners_orange_btn"
+                            android:textColor="@color/white"
+                            android:shadowColor="@color/yellow"
+                            android:layout_marginRight="25dp"
+                            android:buttonTint="@color/white"
+                            style="@style/TextView"/>
+
+                        <RadioButton
+                            android:id="@+id/customerRadio"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_weight="1"
+                            android:text="Group"
+                            android:textColor="@color/black"
+                            android:shadowColor="@color/orange"
+                            android:layout_marginRight="25dp"
+                            android:buttonTint="@color/orange"
+                            style="@style/TextView"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/boothLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/editBoothInformation"
+                        android:gravity="center"
+                        style="@style/HeadingsTextView"
+                        android:textColor="@color/orange"/>
+
+                    <EditText
+                        android:maxLines="1"
+                        android:id="@+id/boothName"
+                        android:inputType="textPersonName"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/booth_name"
+                        style="@style/EditText"/>
+
+                    <EditText
+                        android:gravity="center_vertical"
+                        android:maxLength="14"
+                        android:maxLines="1"
+                        android:id="@+id/BoothUserName"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/booth_username"
+                        android:digits="@string/USERNAMELIMIT"
+                        style="@style/EditText"/>
+
+                    <TextView
+                        android:gravity="center_vertical"
+                        android:editable="false"
+                        android:maxLines="1"
+                        android:id="@+id/email"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/emailAddress"
+                        style="@style/EditText"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:orientation="horizontal"
+                        android:paddingRight="25dp"
+                        android:paddingLeft="25dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/layoutstyle_edittext"
+                        android:weightSum="1"
+                        android:gravity="center_vertical">
+
+                        <EditText
+                            android:layout_weight="1"
+                            android:maxLength="13"
+                            android:id="@+id/phone"
+                            android:hint="@string/mobilenumber"
+                            android:textColorHint="@color/font_color"
+                            android:inputType="phone"
+                            android:layout_height="match_parent"
+                            android:layout_width="0dp"
+                            android:background="@null"
+                            android:textSize="14dp"
+                            android:editable="true"
+                            android:maxLines="1"/>
+
+                        <TextView
+                            android:id="@+id/isVerify"
+                            style="@style/TextView"
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/verify"/>
+
+                    </LinearLayout>
+
+                    <AutoCompleteTextView
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/boothCity"
+                        style="@style/EditText"
+                        android:hint="@string/city"
+                        android:drawableRight="@drawable/drop_down_black"
+                        android:focusableInTouchMode="false"/>
+
+                    <AutoCompleteTextView
+                        android:focusableInTouchMode="false"
+                        android:id="@+id/boothType"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/boothType"
+                        android:drawableRight="@drawable/drop_down_black"
+                        style="@style/EditText"/>
+
+                    <EditText
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:id="@+id/boothVarification_Maroof"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/verification_c_r_or_maroof"
+                        style="@style/EditText"/>
+
+                    <EditText
+                        android:id="@+id/branchName"
+                        android:inputType="text"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/bank_branch_name"
+                        android:visibility="gone"
+                        style="@style/EditText"/>
+
+                    <EditText
+                        android:maxLines="1"
+                        android:id="@+id/paymentAccount_IBAN"
+                        android:inputType="text"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        android:hint="@string/payment_account_bank_iban"
+                        style="@style/EditText"/>
+
+                    <EditText
+                        android:id="@+id/accountHolderName"
+                        android:inputType="textPersonName"
+                        android:layout_marginTop="20dp"
+                        android:hint="@string/account_holder_name"
+                        android:visibility="gone"
+                        style="@style/EditText"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2.2"
+                    android:paddingTop="30dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:id="@+id/cancelBtn"
+                        android:layout_marginBottom="10dp"
+                        style="@style/OrangeBtnwithweight"
+                        android:text="@string/Cancel"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rounded_corners_lightblack_btn" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="0.2"/>
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:id="@+id/confirmBtn"
+                        android:layout_marginBottom="10dp"
+                        style="@style/OrangeBtnwithweight"
+                        android:text="@string/update"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rounded_corners_orange_btn" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:src="@drawable/umbrella"
+            android:scaleType="fitXY"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="15dp"
+    android:paddingTop="15dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilepic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@color/yellow"/>
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/HeadingsTextView"
+        android:text="username"
+        android:fontFamily="@font/robotomedium"
+        android:textColor="@color/orange"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            >
+    <Button
+        android:id="@+id/unblock_button"
+         style="@style/OrangeBtn"
+        android:layout_width="120dp"
+        android:text="@string/unblock" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

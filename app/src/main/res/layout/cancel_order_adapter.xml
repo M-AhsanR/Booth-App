@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/uppergap"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:visibility="visible"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_date"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/dateTextView"
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/order_no"
+                    android:textColor="@color/orange" />
+
+                <TextView
+                    android:id="@+id/orderNumberTextView"
+                    style="@style/TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/more_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more_icon"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:tint="@color/orange"
+            android:layout_marginRight="10dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/animationorder_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/approved_pendingpayment"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/started_rounded_corners_darkwhite_btn" />
+
+                        <RelativeLayout
+                            android:id="@+id/orderfirststatus"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp">
+
+                            <View
+                                android:id="@+id/firstDot"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/darkgrey_circle" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/order_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/animationorder_details"
+                        android:text="@string/ordered"
+                        android:textColor="#EB100A"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/animationapproval_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/approved_paymentdone"
+                            android:layout_width="@dimen/_60sdp"
+                            android:layout_height="25dp"
+                            android:background="@color/darkwhite" />
+
+                        <RelativeLayout
+                            android:id="@+id/orderSecondStatus"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp">
+
+                            <View
+                                android:id="@+id/secondDot"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/darkgrey_circle" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/approval_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/animationapproval_details"
+                        android:text="@string/approved"
+                        android:textColor="#EB100A"
+                        android:textSize="10dp" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-15dp">
+
+                    <RelativeLayout
+                        android:id="@+id/animationpayment_details"
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="wrap_content">
+
+                        <View
+                            android:id="@+id/orderdispatched"
+                            android:layout_width="@dimen/_70sdp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ending_rounded_corners_darkwhite_btn" />
+
+                        <RelativeLayout
+                            android:id="@+id/orderThirdStatus"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp">
+
+                            <View
+                                android:id="@+id/thirdDot"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/darkgrey_circle" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/orderFourthStatus"
+                            android:layout_width="25dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_height="25dp">
+
+                            <View
+                                android:id="@+id/fourthDot"
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:layout_centerInParent="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/darkgrey_circle" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_70sdp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/animationpayment_details">
+
+                        <TextView
+                            android:id="@+id/payment_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/paid"
+                            android:textColor="#EB100A"
+                            android:textSize="10dp" />
+
+
+                        <TextView
+                            android:id="@+id/delivery_details"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:text="@string/delevered"
+                            android:textColor="#EB100A"
+                            android:textSize="10dp" />
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/my_order_style"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_alignParentRight="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/currencyTextView"
+                    style="@style/MiniTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="222.22 SAR"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange" />
+</LinearLayout>

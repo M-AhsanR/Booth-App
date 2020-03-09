@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="8dp"
+    android:layout_marginBottom="5dp"
+    android:layout_marginRight="2.5dp"
+    android:layout_marginLeft="2.5dp">
+
+    <RelativeLayout
+        android:id="@+id/layout_one"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_200sdp"
+        android:background="#DAD1D1"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/coverImg1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/suggested_booth_placeholder"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_44sdp"
+            android:layout_below="@+id/coverImg1"
+            android:background="@color/orange"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:id="@+id/boothName1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Booth Name"
+                android:textColor="@color/white"
+                style="@style/HeadingsTextView"
+                />
+            <TextView
+                android:layout_marginStart="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_4sdp"
+                android:id="@+id/boothCity1"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booth City"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            card_view:civ_border_width="2dp"
+            card_view:civ_border_color="@color/white"
+            android:id="@+id/boothImg1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginRight="20dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@color/white"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/isSelected1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44000000">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/check_circle_icon"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_two"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_220sdp"
+        android:background="#DAD1D1"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:id="@+id/coverImg2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/suggested_booth_placeholder" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/coverImg2"
+            android:background="@color/orange"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/boothName2"
+                style="@style/HeadingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booth Name"
+                android:textColor="@color/white"
+                android:layout_marginLeft="20dp" />
+            <TextView
+                android:id="@+id/boothCity2"
+                style="@style/TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booth City"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                android:textStyle="normal"
+                android:layout_marginLeft="20dp" />
+        </LinearLayout>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            card_view:civ_border_width="2dp"
+            card_view:civ_border_color="@color/white"
+            android:id="@+id/boothImg2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_marginRight="20dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@color/white"/>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/isSelected2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#44000000">
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/check_circle_icon"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.bikomobile:circleindicatorpager:1.0.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3ef5fb2f0d6d3fc8e5cbcd2e50b3510/jetified-circleindicatorpager-1.0.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/b3ef5fb2f0d6d3fc8e5cbcd2e50b3510/jetified-circleindicatorpager-1.0.0/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bikomobile/circleindicatorpager/1.0.0/147d31e09bfefad7edce023139279ba54f91adb1/circleindicatorpager-1.0.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.bikomobile/circleindicatorpager/1.0.0/919154c556aa839ca9dabd58fcc89160baa1c2a0/circleindicatorpager-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context=".Activities.SelectUserTypeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/umbrella" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_weight="1"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/as_buyer"
+            android:layout_width="0sp"
+            android:layout_height="170dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round_corner_white_btn"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="-20dp"
+                android:elevation="5dp">
+
+                <ImageView
+                    android:id="@+id/buyer_outer_circlr"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/white_circle"
+                    android:elevation="8dp" />
+
+                <ImageView
+                    android:id="@+id/buyer_inner_circlr"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/white_circle"
+                    android:elevation="8dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/reg_user_image"
+                style="@style/HeadingsTextView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_shopping_bag"
+                android:text="As a Buyer"
+                android:padding="7dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_reg_user"
+                style="@style/HeadingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/buyer"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/as_booth"
+            android:layout_width="0sp"
+            android:layout_height="170dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/round_corner_white_btn"
+            android:elevation="5dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="start"
+                android:layout_marginTop="-20dp"
+                android:layout_marginStart="5dp">
+
+                <ImageView
+                    android:id="@+id/booth_outer_circlr"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/white_circle"
+                    android:elevation="8dp" />
+
+                <ImageView
+                    android:id="@+id/booth_inner_circlr"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/white_circle"
+                    android:elevation="8dp" />
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/reg_booth_image"
+                style="@style/HeadingsTextView"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/ic_shop"
+                android:padding="7dp"
+                android:textAllCaps="false"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_reg_booth"
+                style="@style/HeadingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/booth_register_screen"
+                android:layout_marginTop="5dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="2"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ins_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/buyer"
+            style="@style/HeadingsTextView"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/ins_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            style="@style/TextView"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:text="@string/registering_as_a_buyer_will_let_you_experience_purchasing_the_products_you_desire_to_have" />
+        <!--<in.codeshuffle.typewriterview.TypeWriterView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAlignment="center"-->
+            <!--android:id="@+id/ins_body"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_marginStart="30dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:layout_marginEnd="30dp"-->
+            <!--android:textColor="@color/black"/>-->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rounded_corners_orange_btn"
+        android:elevation="3dp"
+        android:text="@string/proceed"
+        style="@style/OrangeBtn"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+</LinearLayout>

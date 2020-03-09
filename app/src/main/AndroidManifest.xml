@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.schopfen.Booth">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="false"
+        android:appComponentFactory="whateverString"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:windowSoftInputMode="stateUnchanged"
+        tools:replace="android:appComponentFactory,android:allowBackup,android:supportsRtl">
+        <activity android:name=".Activities.SuggestedUserActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.FollowersNewActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.ExploreAppActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.TransactionHistory"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.UserSummaryOrder"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.RatingAndReviewsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.MyPromoCodes"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.AddPromoCode"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.SelectedCategoriesList"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.SummaryOrder"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.BlockUserActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.InboxActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.ChatActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.PayActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.ApproveOrderActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name=".Activities.CreateAddressDialog"
+            android:theme="@style/Theme.UserDialog" />
+        <activity android:name=".Activities.ProductComments"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.Ask_QuestionActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.MapsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.MyProfileActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.FollowingsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.ContactBoothActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.BoothSettingsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.BoothProfileActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.EditBoothActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.FollowersActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.AboutBoothActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.AboutUsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.AddProductActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.BoothMainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/bottom_nevigation_theme">
+            <intent-filter>
+                <action android:name=".BoothMainActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.SuggestedBoothsActivity"
+            android:screenOrientation="sensorPortrait"/>
+
+        <service android:name=".MyChatService" />
+        <service android:name=".FileUploadService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <activity android:name=".Activities.ForgotPasswordActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.SplashScreen"
+            android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.MainCategoriesActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.RegisterBoothActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.SelectUserTypeActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.QuestionsDetailsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.OthersProfileActivity"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name=".Activities.SettingsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.ContactUsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.ShoppingCartActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.SetupBoothProfileActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.CheckOutActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.ProductDetailsActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.CategoriesListActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.RegisterBayerActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.LoginActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity android:name=".Activities.MainActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/bottom_nevigation_theme">
+            <intent-filter>
+                <action android:name=".MainActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".videoTrimmer.VideoTrimmerActivity"
+            android:screenOrientation="sensorPortrait"/>
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity" /> <!-- <activity android:name="com.schopfen.Booth.Activities.SignUpActivity" /> -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCrYoU_luhraLgDpRs6upjx0xSlNJptdMw" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/default_notification_channel_id" />
+
+        <service android:name=".DataClasses.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service> <!-- <service android:name=".DataClasses.FirebaseIDService"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="com.google.firebase.INSTANCE_ID_EVENT" /> -->
+        <!-- </intent-filter> -->
+        <!-- </service> &lt;!&ndash; <activity android:name="com.schopfen.Booth.Activities.ChatScreenActivity" /> &ndash;&gt; -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/orange" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.athkalia.emphasis:emphasis:0.4@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84e83fcc31056436d453f98c7d57c98d/emphasis-0.4/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/84e83fcc31056436d453f98c7d57c98d/emphasis-0.4/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.athkalia.emphasis/emphasis/0.4/995f332285036d66d199f19a990f67b4c0c0e8f4/emphasis-0.4-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.athkalia.emphasis/emphasis/0.4/c1f88163522c5f33e55bb446bb29fef226e79598/emphasis-0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

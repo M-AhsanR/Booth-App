@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/ll_cri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/orange" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:transitionName="profile"
+            android:id="@+id/boothImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/username"
+                style="@style/HeadingsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/name"
+                android:textColor="@color/orange"
+                />
+            <TextView
+                android:id="@+id/boothCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/font_color"
+                style="@style/MiniTextView"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/time"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/time"
+            style="@style/MiniTextView"
+            android:textColor="@color/time_color"
+            />
+
+        <ImageView
+            android:id="@+id/more"
+            android:tint="@color/orange"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/more_icon" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/line_divider"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/cat_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp">
+    </androidx.viewpager.widget.ViewPager>
+
+        <ImageView
+            android:id="@+id/repost_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/repost_img"
+            android:layout_alignParentRight="true"
+            android:visibility="visible"/>
+    </RelativeLayout>
+
+    <com.bikomobile.circleindicatorpager.CircleIndicatorPager
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        app:ci_drawable="@drawable/selected_dots"
+        app:ci_drawable_unselected="@drawable/default_dots"
+        app:ci_height="7dp"
+        app:ci_width="7dp" >
+    </com.bikomobile.circleindicatorpager.CircleIndicatorPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+            android:id="@+id/productName"
+            style="@style/HeadingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotomedium"
+            android:textColor="@color/orange" />
+
+        <TextView
+            android:id="@+id/productCategory"
+            style="@style/MiniTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/font_color" />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:paddingLeft="20dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/like"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <!--<ImageView-->
+                    <!--android:layout_width="25dp"-->
+                    <!--android:layout_height="25dp"-->
+                    <!--android:src="@drawable/grey_like_icon"/>-->
+
+                <com.like.LikeButton
+                    android:id="@+id/likeIcon"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    app:icon_type="heart"
+                    android:layout_gravity="center"
+                    app:circle_start_color="@color/yellow"
+                    app:like_drawable="@drawable/ic_heart_active"
+                    app:unlike_drawable="@drawable/ic_heart_inactive"
+                    app:dots_primary_color="@color/yellow"
+                    app:dots_secondary_color="@color/orange"
+                    app:circle_end_color="@color/yellow"
+                    app:icon_size="25dp"
+                    app:anim_scale_factor="2"
+                    app:is_enabled="true" />
+
+                <TextView
+                    android:textStyle="bold"
+                    android:id="@+id/likesCount"
+                    android:textColor="@color/orange"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    style="@style/MiniTextView"/>
+
+            <!--<TextView-->
+                <!--android:layout_marginLeft="2dp"-->
+                <!--android:textSize="12sp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/Likes"-->
+                <!--style="@style/MiniTextView"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/addToCart"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="start">
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/addtocart_icon"/>
+
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:textColor="@color/font_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    style="@style/MiniTextView"/>
+
+                <!--<TextView-->
+                    <!--android:layout_marginLeft="2dp"-->
+                    <!--android:textSize="12sp"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="@string/SAR"-->
+                    <!--style="@style/MiniTextView"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
+
+
+            <LinearLayout
+                android:id="@+id/commentsCountLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="23dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_comment_icon" />
+
+                <TextView
+                    android:id="@+id/commentsCount"
+                    style="@style/MiniTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:textColor="@color/orange" />
+
+                <!--<TextView-->
+                <!--android:layout_marginLeft="2dp"-->
+                <!--android:textSize="12sp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/comments"-->
+                <!--style="@style/MiniTextView"/>-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/productShareBtn"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="23dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_share_icon"/>
+            <!--<TextView-->
+                <!--android:textSize="12sp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/share"-->
+                <!--style="@style/MiniTextView"/>-->
+        </LinearLayout>
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/blurring"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:background="@color/blurr"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/line_divider"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="@color/orange"/>-->
+
+</LinearLayout>
+
+
+
+

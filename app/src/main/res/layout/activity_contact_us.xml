@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.RegisterBayerActivity"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:background="@color/white"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/contactUs"
+            style="@style/HeadingsTextView"/>
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_main_logo"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/orange"></LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/mainLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                    <TextView
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sendUsFeedBackInquiries"
+                        style="@style/HeadingsTextView"/>
+
+                <TextView
+                    android:id="@+id/contactUsDesctiption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView"/>
+
+                    <EditText
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPersonName"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/fullName"
+                        android:hint="@string/fullName"
+                        style="@style/EditText" />
+
+                    <EditText
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="textWebEmailAddress"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/emailAddress"
+                        android:hint="@string/emailAddress"
+                        style="@style/EditText"/>
+
+                    <EditText
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:hint="@string/mobilenumber"
+                        android:inputType="phone"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/phoneNumber"
+                        style="@style/EditText"/>
+
+                <EditText
+                    android:maxLines="1"
+                    android:imeOptions="actionNext"
+                    android:hint="@string/orderNumber"
+                    android:inputType="phone"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/orderNumber"
+                    style="@style/EditText"/>
+
+                    <EditText
+                        android:imeOptions="actionDone"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
+                        android:gravity="start"
+                        android:hint="@string/details"
+                        android:layout_height="150dp"
+                        android:inputType="text"
+                        android:layout_marginTop="20dp"
+                        android:id="@+id/details"
+                        style="@style/EditText"/>
+
+                <Button
+                    android:id="@+id/submitBtn"
+                    android:layout_marginTop="20dp"
+                    style="@style/OrangeBtn"
+                    android:layout_marginLeft="65dp"
+                    android:layout_marginRight="65dp"
+                    android:text="@string/Submit"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</LinearLayout>

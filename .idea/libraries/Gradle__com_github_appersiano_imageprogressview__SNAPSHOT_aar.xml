@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.appersiano:imageprogressview:-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c0d1cdb511c20e0c2d034eb756df007/jetified-imageprogressview--SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0c0d1cdb511c20e0c2d034eb756df007/jetified-imageprogressview--SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.appersiano/imageprogressview/-SNAPSHOT/2c79dc25556e22b11503548a039be89701988925/imageprogressview--SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

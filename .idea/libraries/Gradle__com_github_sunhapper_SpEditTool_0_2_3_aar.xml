@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.sunhapper:SpEditTool:0.2.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1370c4096c8f8f660a269641d7622963/jetified-SpEditTool-0.2.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1370c4096c8f8f660a269641d7622963/jetified-SpEditTool-0.2.3/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.sunhapper/SpEditTool/0.2.3/7d47f6812d756425aebd7eb4baf9cdfd79269e2a/SpEditTool-0.2.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
