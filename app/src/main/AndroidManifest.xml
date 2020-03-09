@@ -152,7 +152,7 @@
         <activity android:name="com.soundcloud.android.crop.CropImageActivity" /> <!-- <activity android:name="com.schopfen.Booth.Activities.SignUpActivity" /> -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCrYoU_luhraLgDpRs6upjx0xSlNJptdMw" />
+            android:value="Map_Key" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_channel_id"
